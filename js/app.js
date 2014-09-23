@@ -3,7 +3,6 @@ var App = (function() {
   function App(opts) {
     this.words = opts.words;
     this.length = this.words.length;
-    this.currentWord = this.words[0];
     init.call(this);
   }
 
@@ -11,6 +10,7 @@ var App = (function() {
   function init() {
     this.currentIndex = 0;
     this.shuffle();
+    this.currentWord = this.words[0];
   }
 
   // public instance methods
