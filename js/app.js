@@ -23,7 +23,7 @@ var App = (function() {
       this.readWord();
 
       // Check if we made it through the deck
-      if (this.currentIndex == this.length-1) {
+      if (this.currentIndex == this.length) {
         Speaker.say('Congratulation, you made it through the list.');
         init.call(this);
       }
