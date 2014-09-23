@@ -19,14 +19,15 @@ var App = (function() {
 
     nextWord: function() {
       this.currentIndex++;
-      this.currentWord = this.words[this.currentIndex];
-      this.readWord();
 
       // Check if we made it through the deck
       if (this.currentIndex == this.length) {
         Speaker.say('Congratulation, you made it through the list.');
         init.call(this);
       }
+
+      this.currentWord = this.words[this.currentIndex];
+      this.readWord();
     },
 
     readWord: function() {
