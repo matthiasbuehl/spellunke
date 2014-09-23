@@ -43,7 +43,7 @@
 
   $casimira.click(function(e) {
     app = new App({
-      words: ['found', 'stout', 'groom', 'damp', 'troop', 'son', 'hound', 'track', 'ton', 'coop', 'bent', 'shock', 'toil', 'lend']
+      words: ['found', 'stout', 'groom', 'damp', 'troop', 'son', 'hound', 'track', 'ton', 'coop', 'bent', 'shock', 'toil', 'lend', 'trim']
     });
 
     $('#students a').each(function(index) {
