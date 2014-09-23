@@ -1,5 +1,13 @@
+body {
+  width: 400px;
+  margin: 20px auto;
+  padding:20px;
+  border: 1px solid black;
+}
+
 #user_input {
   float: left;
+  padding-right: 20px;
 }
 
 #students {
@@ -8,11 +16,11 @@
 
 #controls {
   clear: both;
-  padding-top: 5px;
+  padding-top: 20px;
 }
 
 input#word {
-  height: 30px;
+  height: 50px;
 }
 
 #correct_words {
@@ -22,7 +30,7 @@ input#word {
 .button {
   display: inline-block;
   text-decoration: none;
-  font: bold 12px/12px HelveticaNeue, Arial;
+  font: bold 20px/20px HelveticaNeue, Arial;
   padding: 8px 11px;
   color: #555;
   border: 1px solid #dedede;
