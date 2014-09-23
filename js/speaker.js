@@ -5,7 +5,7 @@ var Speaker = (function() {
   // static methods
   Speaker.say = function(text){
     var utterance = new SpeechSynthesisUtterance(text);
-    utterance.rate = 0;
+    utterance.rate = 1;
     window.speechSynthesis.speak(utterance);
   }
 
