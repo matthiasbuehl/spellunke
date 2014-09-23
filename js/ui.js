@@ -26,6 +26,7 @@
     var isCorrect = app.checkWord($word.val());
     if (isCorrect) {
       app.nextWord();
+      $word.val('');
     }
   });
 

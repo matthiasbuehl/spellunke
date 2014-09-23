@@ -18,6 +18,7 @@ var App = (function() {
     constructor: App,
 
     nextWord: function() {
+      this.currentIndex++;
       this.currentWord = this.words[this.currentIndex];
       this.readWord();
 
@@ -25,9 +26,6 @@ var App = (function() {
       if (this.currentIndex == this.length-1) {
         Speaker.say('Congratulation, you made it through the list.');
         init.call(this);
-      }
-      else {
-        this.currentIndex++;
       }
     },
 
