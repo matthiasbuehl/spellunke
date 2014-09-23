@@ -1,40 +1,22 @@
 <html>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/speaker.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/app.js"></script>
-<input id="word" type="text">
-<a id="next" href="#">next</a>
-<a id="check" href="#">check</a>
-<a id="read" href="#">read</a>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <div id="user-input">
+    <input id="word" type="text">
+  </div>
+  <div id="students">
+    <a id="casimira" class="button" href="#">Casimira</a>
+    <a id="nuno" class="button" href="#">Nuno</a>
+  </div>
+  <div id="controls">
+    <a id="next" class="button" href="#">next</a>
+    <a id="check" class="button" href="#">check</a>
+    <a id="read" class="button" href="#">read</a>
+  </div>
 
-<script>
-var app = new App( {
-  words: ['hello', 'you', 'sun', 'moon']
-});
-var $next = $('#next'),
-    $check = $('#check'),
-    $read = $('#read'),
-    $word = $('#word');
-
-$next.hide();
-$check.hide();
-
-$next.click(function(e) {
-  app.nextWord();
-});
-
-$read.click(function(e) {
-  app.readWord();
-  $check.show();
-});
-
-$check.click(function(e) {
-  var isCorrect = app.checkWord($word.val());
-  if (isCorrect) {
-    app.nextWord();
-  }
-});
-
-</script>
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/speaker.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/ui.js"></script>
 </html>

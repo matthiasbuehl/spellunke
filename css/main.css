@@ -1,0 +1,41 @@
+#user-input {
+  float: left;
+}
+
+#students {
+  float: left;
+}
+
+#controls {
+  clear: both;
+  padding-top: 5px;
+}
+
+input#word {
+  height: 30px;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  font: bold 12px/12px HelveticaNeue, Arial;
+  padding: 8px 11px;
+  color: #555;
+  border: 1px solid #dedede;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.button:hover {
+  border-top-color: #28597a;
+  background: #28597a;
+  color: #ccc;
+}
+
+.button-active {
+  border-top-color: #28597a;
+  background: #28597a;
+  color: #ccc;
+}
+
