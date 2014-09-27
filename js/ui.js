@@ -29,12 +29,19 @@
     $word.focus();
   };
 
-
   // Events
   $(document).keyup(function(e) {
     console.log(e.which);
-    if (e.which == 13) {
-      $check.click();
+    switch(e.which) {
+      case 13:
+        $check.click();
+        break;
+
+      case 32:
+        // return if space is not the first and only character
+        if ($word.val() != ' ') { return; }
+        $read.click();
+        break;
     }
   });
 
