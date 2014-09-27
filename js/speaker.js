@@ -5,7 +5,14 @@ var Speaker = (function() {
   // static methods
   Speaker.say = function(text){
     var utterance = new SpeechSynthesisUtterance(text);
-    utterance.rate = 1;
+    var voices = window.speechSynthesis.getVoices();
+    // set a random voice if we have voices
+    if (voices) {
+      utterance.voice =
+        voices[ Math.floor( Math.random() * voices.length ) ];
+    }
+    // slow down speach a bit
+    utterance.rate = .8;
     window.speechSynthesis.speak(utterance);
   }
 

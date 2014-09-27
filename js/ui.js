@@ -3,15 +3,13 @@
     words: ['hello', 'you', 'sun', 'moon']
   });
 
-  var $next = $('#next'),
-      $check = $('#check'),
+  var $check = $('#check'),
       $read = $('#read'),
       $word = $('#word'),
       $nuno = $('#nuno'),
-      $casimira = $('#casimira');
+      $casimira = $('#casimira'),
       $correctWords = $('#correct_words');
 
-  $next.hide();
   $check.hide();
 
   function clearActive() {
@@ -26,23 +24,34 @@
     $correctWords.html('');
   };
 
+  function clearInput() {
+    $word.val('');
+    $word.focus();
+  };
 
-  $next.click(function(e) {
-    app.nextWord();
+
+  // Events
+  $(document).keyup(function(e) {
+    console.log(e.which);
+    if (e.which == 13) {
+      $check.click();
+    }
   });
 
   $read.click(function(e) {
     app.readWord();
     $check.show();
+    clearInput();
   });
 
   $check.click(function(e) {
     var isCorrect = app.checkWord($word.val());
     if (isCorrect) {
       app.nextWord();
-      $correctWords.append('<div>' + $word.val() + '</div>');
-      $word.val('');
+      $correctWords.append('<div class="button button-green">' + $word.val() + '</div>');
     }
+
+    clearInput();
   });
 
   $nuno.click(function(e) {

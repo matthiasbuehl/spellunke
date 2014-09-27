@@ -1,30 +1,28 @@
 body {
-  width: 400px;
+  width: 430px;
   margin: 20px auto;
-  padding:20px;
+  padding: 20px;
   border: 1px solid black;
 }
 
 #user_input {
   float: left;
-  padding-right: 20px;
 }
 
 #students {
   float: left;
 }
 
-#controls {
-  clear: both;
-  padding-top: 20px;
+#user_input, #students, #controls, #correct_words {
+  padding: 5px 0;
 }
 
 input#word {
-  height: 50px;
+  font-size: 40px;
 }
 
-#correct_words {
-  padding-top: 20px;
+.clear {
+  clear: both;
 }
 
 .button {
@@ -48,6 +46,11 @@ input#word {
 .button-active {
   border-top-color: #28597a;
   background: #28597a;
+  color: #ccc;
+}
+
+.button-green {
+  background: #006633;
   color: #ccc;
 }
 
