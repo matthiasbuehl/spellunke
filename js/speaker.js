@@ -7,7 +7,7 @@ var Speaker = (function() {
     var utterance = new SpeechSynthesisUtterance(text);
     var voices = window.speechSynthesis.getVoices();
     // set a random voice if we have voices
-    if (voices) {
+    if (false && voices) {
       utterance.voice =
         voices[ Math.floor( Math.random() * voices.length ) ];
     }
