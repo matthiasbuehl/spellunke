@@ -63,7 +63,7 @@
 
   $nuno.click(function(e) {
     app = new App({
-      words: ['pin', 'win', 'hit', 'sit', 'miss', 'kiss', 'be', 'run', 'fin', 'bit', 'bliss']
+      words: ['clip', 'flip', 'slip', 'flag', 'black', 'plan', 'come', 'good', 'clap', 'flat', 'slim']
     });
 
     clearActive();
@@ -73,7 +73,7 @@
 
   $casimira.click(function(e) {
     app = new App({
-      words: ['found', 'stout', 'groom', 'damp', 'troop', 'son', 'hound', 'track', 'ton', 'coop', 'bent', 'shock', 'toil', 'lend', 'trim']
+      words: ['state', 'close', 'slide', 'face', 'globe', 'pave', 'size', 'smoke', 'flame', 'broke', 'prize', 'skate', 'smile', 'plane', 'stone']
     });
 
     clearActive();
