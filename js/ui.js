@@ -8,7 +8,9 @@
       $word = $('#word'),
       $nuno = $('#nuno'),
       $casimira = $('#casimira'),
-      $correctWords = $('#correct_words');
+      $correctWords = $('#correct_words'),
+      casimira_words = ['clip', 'flip', 'slip', 'flag', 'black', 'plan', 'come', 'good', 'clap', 'flat', 'slim'],
+      nuno_words = ['state', 'close', 'slide', 'face', 'globe', 'pave', 'size', 'smoke', 'flame', 'broke', 'prize', 'skate', 'smile', 'plane', 'stone'];
 
   $check.hide();
 
@@ -39,7 +41,7 @@
 
       case 32:
         // return if space is not the first and only character
-        if ($word.val() != ' ') { return; }
+        if ($word.val().trim() != '') { return; }
         $read.click();
         break;
     }
@@ -62,22 +64,14 @@
   });
 
   $nuno.click(function(e) {
-    app = new App({
-      words: ['clip', 'flip', 'slip', 'flag', 'black', 'plan', 'come', 'good', 'clap', 'flat', 'slim']
-    });
-
     clearActive();
-
+    app = new App( { words: casimira_words } );
     $(e.target).addClass('button-active');
   });
 
   $casimira.click(function(e) {
-    app = new App({
-      words: ['state', 'close', 'slide', 'face', 'globe', 'pave', 'size', 'smoke', 'flame', 'broke', 'prize', 'skate', 'smile', 'plane', 'stone']
-    });
-
     clearActive();
-
+    app = new App( { words: nuno_words } );
     $(e.target).addClass('button-active');
   });
 
